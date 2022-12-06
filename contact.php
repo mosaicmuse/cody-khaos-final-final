@@ -208,8 +208,8 @@ $message = '<p>Thank you for submitting my form!</p>';
           </script>
         </li>
         <li>All Rights Reserved</li>
-        <li>Terms of Use</li>
-        <li>Privacy Policy</li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
         <li>
           Web design by
           <a href="https://colleenlenahansen.com" target="_blank">Colleen</a>
