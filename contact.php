@@ -3,13 +3,13 @@
 // for colleen!!!!!
       
   $name = '';
-        $email = '';
-         $comment = '';
-       $name_err = '';
-        $email_err = '';
-         $comment_err = '';
-          $captcha_err = '';
-          $message = '';
+  $email = '';
+  $comment = '';
+  $name_err = '';
+  $email_err = '';
+  $comment_err = '';
+  $captcha_err = '';
+  $message = '';
 
 // what is the request method???
 // if the request method == POST
@@ -31,7 +31,7 @@ $email = $_POST['email'];
   }
 
   if(empty($_POST['comment'])) {
-$comment_err = 'Please share your comments with us!';
+$comment_err = 'Please enter a message';
   } else {
 $comment = $_POST['comment'];
   }
@@ -40,11 +40,11 @@ $comment = $_POST['comment'];
           $captcha=$_POST['g-recaptcha-response'];
         }
         if(!$captcha){
-        $captcha_err = "Please check the ReCaptcha Form Box!";
+        $captcha_err = "Please check the ReCaptcha Form Box";
 
         }
         // Colleen - your Secret Key !!!!!!!!!
-        $secretKey = "";
+        $secretKey = "6Lftw1sjAAAAAAmY7B65ek5g8IrX7LfO42OSgRFf";
         $ip = $_SERVER['REMOTE_ADDR'];
         // post request to server
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
@@ -53,12 +53,12 @@ $comment = $_POST['comment'];
         // should return JSON with success as true
         if($responseKeys["success"]) {
             // Colleen - YOUR EMAIL BELOW
-        $to = '';
+        $to = 'clenahansen@gmail.com';
         $subject = 'Testing ReCaptcha Form';
         $body = '
         Name: '.$name.' '.PHP_EOL.'
         Email: '.$email.' '.PHP_EOL.'
-        Comments: '.$comment.' '.PHP_EOL.'
+        Message: '.$comment.' '.PHP_EOL.'
 ';
 
 $headers = array(
@@ -68,7 +68,7 @@ $headers = array(
 mail($to, $subject, $body, $headers);
 // header('Location:thx.php');
 
-$message = '<p>Thank you for submitting my form!</p>';
+$message = '<p>Thank you for contacting Cody Khaos</p>';
         } 
 
 }  // closing server request
@@ -164,10 +164,10 @@ $message = '<p>Thank you for submitting my form!</p>';
 <input type="email" name="email" placeholder="Email" value="<?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']) ; ?>">
 <span class="error"><?php echo $email_err;?></span>
 
- <label>Comments</label>    
+ <label>Message</label>    
       <textarea name="comment" placeholder="Your comments"><?php if(isset($_POST['comment'])) echo htmlspecialchars($_POST['comment']) ; ?></textarea>
  <span class="error"><?php echo $comment_err;?></span>    
-      <div class="g-recaptcha" data-sitekey="6Le4Lk8hAAAAAO9YK8TXiEPGEWvEY8rImpBi7HL9"></div>
+      <div class="g-recaptcha" data-sitekey="6Lftw1sjAAAAAHQO5Dh82-g2QFwFeWypGTTTwfF9"></div>
     <span class="error"><?php echo  $captcha_err;?></span>
 
        <input type="submit" name="submit" value="Post comment"><br><br>
