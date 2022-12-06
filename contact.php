@@ -107,6 +107,7 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
       crossorigin="anonymous"
     ></script>
     <script src="scripts/script.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <title>Contact | Cody Khaos: Hip Hop Choreographer and Coach</title>
   </head>
   <body class="interior contact">
@@ -165,7 +166,7 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
 <span class="error"><?php echo $email_err;?></span>
 
  <label>Message</label>    
-      <textarea name="comment" placeholder="Your comments"><?php if(isset($_POST['comment'])) echo htmlspecialchars($_POST['comment']) ; ?></textarea>
+      <textarea name="comment" placeholder="Enter your message here"><?php if(isset($_POST['comment'])) echo htmlspecialchars($_POST['comment']) ; ?></textarea>
  <span class="error"><?php echo $comment_err;?></span>    
       <div class="g-recaptcha" data-sitekey="6Lftw1sjAAAAAHQO5Dh82-g2QFwFeWypGTTTwfF9"></div>
     <span class="error"><?php echo  $captcha_err;?></span>
