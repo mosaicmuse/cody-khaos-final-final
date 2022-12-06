@@ -171,7 +171,7 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
       <div class="g-recaptcha" data-sitekey="6Lftw1sjAAAAAHQO5Dh82-g2QFwFeWypGTTTwfF9"></div>
     <span class="error"><?php echo  $captcha_err;?></span>
 
-       <input class="btn-branding" type="submit" name="submit" value="Post comment"><br><br>
+       <input type="submit" name="submit" value="Submit"><br><br>
        </fieldset>
     </form>
       </div>

@@ -35,6 +35,22 @@ textarea {
 
 input[type="submit"] {
   width: auto;
+  height: auto;
+  border: none;
+  background: var(--ck-accent-light);
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:hover {
+  background: var(--ck-accent-dark);
+  color: white;
+  font-weight: bold;
 }
 
 .g-recaptcha {
