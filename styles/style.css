@@ -119,6 +119,10 @@ nav {
   border-radius: 5px;
 }
 
+.videos {
+  display: flex;
+}
+
 .social-links {
   position: fixed;
   right: 0;
