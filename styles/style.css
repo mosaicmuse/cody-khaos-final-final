@@ -119,10 +119,6 @@ nav {
   border-radius: 5px;
 }
 
-.videos {
-  display: flex;
-}
-
 .social-links {
   position: fixed;
   right: 0;
@@ -362,6 +358,10 @@ video {
   max-width: 200px;
   width: 30%;
   box-shadow: 6px 6px var(--ck-accent-dark);
+}
+
+iframe {
+  margin-bottom: 20px;
 }
 
 /*---------hamburger menu---------*/
