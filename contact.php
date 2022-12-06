@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/masonry.css" />
-    <link rel="stylesheet" href="styles/lightbox.css" />
+    <link href="styles/lightbox.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/fcbb745e7f.js"
       crossorigin="anonymous"
@@ -30,9 +30,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/script.js"></script>
-    <title>About Cody Khaos | Hip Hop Choreographer and Coach</title>
+    <title>Contact | Cody Khaos: Hip Hop Choreographer and Coach</title>
   </head>
-  <body class="interior about">
+  <body class="interior contact">
     <!--START HEADER-->
     <div class="top-menu">
       <nav>
@@ -49,20 +49,20 @@
         /></a>
         <ul id="menu">
           <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li class="active"><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div id="mobileMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li class="active"><a href="contact.php">Contact</a></li>
       </ul>
     </div>
     <!--END HEADER-->
@@ -75,57 +75,40 @@
     <div class="container">
       <!--START WRAPPER-->
       <div class="wrapper">
-        <h1>About</h1>
-        <div id="about-top" class="img-left">
-          <img src="src/headshot.jpg" alt="" />
-          <p>
-            Cody is a Seattle native who began formal studio training in hip hop
-            at his home studio Alderwood Dance Spectrum in 2005. Cody has been a
-            resident choreographer and instructor at multiple Seattle-area
-            studios since 2011. Cody has also worked as a guest choreographer
-            and instructor across Washington and Oregon in competitive,
-            performance and training capacities. Some of Cody’s client base
-            consists of Equity and Agency-signed dancers as well as former,
-            current and prospective NFL cheerleaders. Cody’s professional
-            credits include Ru Paul’s Drag Race Season 8 TV personality Robbie
-            Turner and Vietnamese pop artist Minh Thanh. In addition to
-            choreography, Cody has also worked as a professional dancer in
-            Seattle, performing in multiple resident productions.
-          </p>
-        </div>
-        <h3>Dance Experience</h3>
-        <div class="img-right">
-          <div class="text">
-            <h5>Studio Training</h5>
-            <ul>
-              <li>Alderwood Dance Spectrum</li>
-              <li>The Connection PAC</li>
-              <li>Westlake Dance Center</li>
-            </ul>
-            <h5>Competitive and Exhibition Dance Companies</h5>
-            <ul>
-              <li>
-                Kontagious Performing Company - Captain and Contributing
-                Choreographer, Elite Division
-              </li>
-              <li>PG Fam</li>
-              <li>Luscious & Vicious/The Purple Lemonade Collective</li>
-              <li>The Bad Kids</li>
-            </ul>
-            <h5>Choreographers Trained Under</h5>
-            <ul>
-              <li>Kolanie Marks</li>
-              <li>Andrew Faulkner</li>
-              <li>The T-Twins</li>
-              <li>Ron Smith</li>
-              <li>Shumon Wood</li>
-              <li>Grant Cabebe</li>
-            </ul>
+        <h1>Contact</h1>
+        <form action="">
+          <div class="row">
+            <div class="col mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" />
+            </div>
+            <div class="col mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" />
+            </div>
           </div>
-          <div class="image">
-            <img src="src/cody5.jpg" alt="" /><img src="src/cody3.jpg" alt="" />
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-        </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Message</label
+            >
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-branding">Submit</button>
+        </form>
       </div>
       <!--END WRAPPER-->
       <div class="social-links">
@@ -170,5 +153,11 @@
       </ul>
     </footer>
     <!--END FOOTER-->
+    <script src="scripts/lightbox-plus-jquery.js"></script>
+    <script>
+      lightbox.option({
+        positionFromTop: 200,
+      });
+    </script>
   </body>
 </html>
