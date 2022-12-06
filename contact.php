@@ -19,13 +19,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 // logic - if the field is empty, do something
 
   if(empty($_POST['name'])) {
-$name_err = 'Please fill out your name!';
+$name_err = 'Please fill out your name';
   } else {
 $name = $_POST['name'];
   }
 
   if(empty($_POST['email'])) {
-$email_err = 'Please fill out your email!';
+$email_err = 'Please fill out your email';
   } else {
 $email = $_POST['email'];
   }
@@ -54,7 +54,7 @@ $comment = $_POST['comment'];
         if($responseKeys["success"]) {
             // Colleen - YOUR EMAIL BELOW
         $to = 'clenahansen@gmail.com';
-        $subject = 'Testing ReCaptcha Form';
+        $subject = 'Cody Khaos Form Submission';
         $body = '
         Name: '.$name.' '.PHP_EOL.'
         Email: '.$email.' '.PHP_EOL.'
@@ -171,7 +171,7 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
       <div class="g-recaptcha" data-sitekey="6Lftw1sjAAAAAHQO5Dh82-g2QFwFeWypGTTTwfF9"></div>
     <span class="error"><?php echo  $captcha_err;?></span>
 
-       <input type="submit" name="submit" value="Post comment"><br><br>
+       <input class="btn-branding" type="submit" name="submit" value="Post comment"><br><br>
        </fieldset>
     </form>
       </div>
