@@ -1,0 +1,68 @@
+/* Styles for my form using ReCaptcha */
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+
+form {
+    max-width:400px;
+    margin:20px auto;
+}
+
+fieldset {
+    border:1px solid green;
+    padding:10px;
+}
+
+label {
+    display:block;
+    margin-bottom:5px;
+}
+
+input {
+    height:30px;
+}
+
+input, textarea {
+    width:100%;
+    margin-bottom:10px;
+}
+
+textarea {
+    height:130px;
+    resize: none;
+}
+
+input[type=submit] {
+    width:auto;
+}
+
+
+.g-recaptcha {
+margin-bottom:10px;
+}
+
+.error {
+    color:red;
+    font-style:italic;
+    display:block;
+}
+
+h1 {
+    text-align:center;
+    margin-top:20px;
+}
+
+p {
+    border:1px solid blue;
+    background:lightblue;
+    padding:5px;
+    width:300px;
+    margin:0 auto;
+    text-align:center;
+}
+

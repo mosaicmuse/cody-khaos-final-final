@@ -1,3 +1,79 @@
+<?php
+// defining the variables
+// for colleen!!!!!
+      
+  $name = '';
+        $email = '';
+         $comment = '';
+       $name_err = '';
+        $email_err = '';
+         $comment_err = '';
+          $captcha_err = '';
+          $message = '';
+
+// what is the request method???
+// if the request method == POST
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+// logic - if the field is empty, do something
+
+  if(empty($_POST['name'])) {
+$name_err = 'Please fill out your name!';
+  } else {
+$name = $_POST['name'];
+  }
+
+  if(empty($_POST['email'])) {
+$email_err = 'Please fill out your email!';
+  } else {
+$email = $_POST['email'];
+  }
+
+  if(empty($_POST['comment'])) {
+$comment_err = 'Please share your comments with us!';
+  } else {
+$comment = $_POST['comment'];
+  }
+
+    if(isset($_POST['g-recaptcha-response'])){
+          $captcha=$_POST['g-recaptcha-response'];
+        }
+        if(!$captcha){
+        $captcha_err = "Please check the ReCaptcha Form Box!";
+
+        }
+        // Colleen - your Secret Key !!!!!!!!!
+        $secretKey = "";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+        // should return JSON with success as true
+        if($responseKeys["success"]) {
+            // Colleen - YOUR EMAIL BELOW
+        $to = '';
+        $subject = 'Testing ReCaptcha Form';
+        $body = '
+        Name: '.$name.' '.PHP_EOL.'
+        Email: '.$email.' '.PHP_EOL.'
+        Comments: '.$comment.' '.PHP_EOL.'
+';
+
+$headers = array(
+'From' => 'noreply@codykhaos.com'  
+);
+
+mail($to, $subject, $body, $headers);
+// header('Location:thx.php');
+
+$message = '<p>Thank you for submitting my form!</p>';
+        } 
+
+}  // closing server request
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,6 +88,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/form-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,39 +153,26 @@
       <!--START WRAPPER-->
       <div class="wrapper">
         <h1>Contact</h1>
-        <form action="">
-          <div class="row">
-            <div class="col mb-3">
-              <label for="firstName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="firstName" />
-            </div>
-            <div class="col mb-3">
-              <label for="lastName" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="lastName" />
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Message</label
-            >
-            <textarea class="form-control" id="message" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-branding">Submit</button>
-        </form>
+        <?php echo $message; ?>
+        <form id="comment_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <fieldset>
+    <label>Name</label>
+<input type="text" name="name" placeholder="Your name" value="<?php if(isset($_POST['name'])) echo htmlspecialchars($_POST['name']) ; ?>">
+<span class="error"><?php echo $name_err;?></span>
+
+  <label>Email</label>
+<input type="email" name="email" placeholder="Email" value="<?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']) ; ?>">
+<span class="error"><?php echo $email_err;?></span>
+
+ <label>Comments</label>    
+      <textarea name="comment" placeholder="Your comments"><?php if(isset($_POST['comment'])) echo htmlspecialchars($_POST['comment']) ; ?></textarea>
+ <span class="error"><?php echo $comment_err;?></span>    
+      <div class="g-recaptcha" data-sitekey="6Le4Lk8hAAAAAO9YK8TXiEPGEWvEY8rImpBi7HL9"></div>
+    <span class="error"><?php echo  $captcha_err;?></span>
+
+       <input type="submit" name="submit" value="Post comment"><br><br>
+       </fieldset>
+    </form>
       </div>
       <!--END WRAPPER-->
       <div class="social-links">
