@@ -97,6 +97,10 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
     />
     <link rel="stylesheet" href="styles/masonry.css" />
     <link href="styles/lightbox.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <script
       src="https://kit.fontawesome.com/fcbb745e7f.js"
       crossorigin="anonymous"
