@@ -80,7 +80,8 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="description" content="Cody Khaos is a hip hop choreographer and and competitive dance coach based in South
+          King County, Washington who teaches youth classes." />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -101,6 +102,8 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <script
       src="https://kit.fontawesome.com/fcbb745e7f.js"
       crossorigin="anonymous"
