@@ -585,4 +585,8 @@ iframe {
   video {
     width: 376px;
   }
+  iframe {
+    width: 250px;
+    height: 140px;
+  }
 }
