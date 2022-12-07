@@ -182,20 +182,17 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
       <!--END WRAPPER-->
       <div class="social-links">
         <a
-          rel="noopener noreferrer"
           href="https://instagram.com/codykhaos"
           target="_blank"
           id="ig"
           ><div><i class="fa-brands fa-instagram"></i></div></a
         ><a
-          rel="noopener noreferrer"
           href="https://www.youtube.com/@codykhaosdance"
           target="_blank"
           id="yt"
           ><div><i class="fa-brands fa-youtube"></i></div></a
         ><a
-          rel="noopener noreferrer"
-          href="https://tiktok.com/codykhaos"
+          href="https://www.tiktok.com/@codykhaos"
           target="_blank"
           id="tt"
           ><div><i class="fa-brands fa-tiktok"></i></div
