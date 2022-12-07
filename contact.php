@@ -189,7 +189,7 @@ $message = '<p>Thank you for contacting Cody Khaos</p>';
           ><div><i class="fa-brands fa-instagram"></i></div></a
         ><a
           rel="noopener noreferrer"
-          href="https://youtube.com/codykhaosdance"
+          href="https://www.youtube.com/@codykhaosdance"
           target="_blank"
           id="yt"
           ><div><i class="fa-brands fa-youtube"></i></div></a
