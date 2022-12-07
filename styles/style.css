@@ -361,10 +361,6 @@ iframe {
   margin-bottom: 20px;
 }
 
-#mobile-videos {
-  display: none;
-}
-
 /*---------hamburger menu---------*/
 
 #hamburger {
@@ -576,14 +572,5 @@ iframe {
   }
   .blocks {
     margin-top: 30px;
-  }
-}
-
-@media (max-width: 500px) {
-  #mobile-videos {
-    display: block;
-  }
-  #desktop-videos {
-    display: none;
   }
 }
