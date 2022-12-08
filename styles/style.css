@@ -474,13 +474,13 @@ iframe {
     margin-bottom: 20px;
   }
   nav {
-    padding: 10px 50px;
+    padding: 10px 25px;
   }
   video {
     width: 768px;
   }
   .container {
-    padding: 0 50px;
+    padding: 0 25px;
   }
   .block {
     width: 100%;
@@ -563,7 +563,7 @@ iframe {
 }
 
 /* sm */
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
   video {
     width: 576px;
   }
@@ -603,4 +603,4 @@ iframe {
     width: 250px;
     height: 140px;
   }
-} */
+}
