@@ -563,7 +563,7 @@ iframe {
 }
 
 /* sm */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   video {
     width: 576px;
   }
@@ -603,4 +603,4 @@ iframe {
     width: 250px;
     height: 140px;
   }
-}
+} */
