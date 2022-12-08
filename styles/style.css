@@ -483,9 +483,9 @@ iframe {
   nav {
     padding: 10px 25px;
   }
-  /* video {
+  video {
     width: 768px;
-  } */
+  }
   .container {
     padding: 0 25px;
   }
@@ -557,13 +557,6 @@ iframe {
   /* .main-img img {
     max-width: 150px;
   } */
-
-  .hero video {
-    display: none;
-  }
-  #hidden-image {
-    display: block;
-  }
 }
 
 @media (max-width: 596px) {
